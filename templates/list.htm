@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<h1>Employee Information</h1>
+
+<table class="table table-striped table-bordered">
+   <thead class="bg-primary">
+      <td>Name</td>
+      <td>Gender</td>
+      <td>Phone</td>
+      <td>Bdate</td>
+   </thead>
+
+   {% for row in rows %}
+   <tr class="bg-info">
+      <td>{{row[1]}}</td>
+      <td>{{row[2]}}</td>
+      <td> {{row[3]}}</td>
+      <td>{{row[4]}}</td>
+   </tr>
+   {% endfor %}
+</table>
+<a href="/">Go back to home page</a>
+{% endblock %}
